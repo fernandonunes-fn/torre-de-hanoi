@@ -1,0 +1,29 @@
+Algoritmo "Torre de Hanoi"
+// Disciplina   : Lógica de Programação - Algoritmos
+// Professor    : Fernando Nunes
+// Autor(a)    : FN
+// Data atual  : 21-01-2021 17:10
+Var
+   n:inteiro
+
+procedimento torre(num:inteiro; a,c,b:caractere)
+var
+
+inicio
+   se num = 1 entao
+      escreval("Mova o disco ",num," de ",a," para ",c)
+   senao
+      torre(num-1, a,b,c)
+      escreval("Mova o disco ",num," de ",a," para ",c)
+      torre(num-1, b,c,a)
+   fimse
+fimprocedimento
+
+Inicio
+   escreva("Digite o número de discos: ")
+   leia(n)
+   limpatela
+   escreval("Para empilhar ",n," discos...")
+   escreval()
+   torre(n,"A","C","B")
+Fimalgoritmo
